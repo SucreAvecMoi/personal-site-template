@@ -3,9 +3,296 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>景点介绍</title>
+    <title>杭州西湖 - 人间天堂</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 80px 0;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .content {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+
+        .intro {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 30px;
+            text-align: justify;
+        }
+
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .image-item {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease;
+        }
+
+        .image-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .image-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .image-caption {
+            padding: 15px;
+            background: #f8f9fa;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            color: #2c3e50;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            font-weight: 400;
+            border-left: 4px solid #667eea;
+            padding-left: 15px;
+        }
+
+        .section p {
+            margin-bottom: 15px;
+            text-align: justify;
+            color: #555;
+        }
+
+        .highlights {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+        }
+
+        .highlights h3 {
+            margin-bottom: 20px;
+            font-size: 1.4rem;
+        }
+
+        .highlights ul {
+            list-style: none;
+        }
+
+        .highlights li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .highlights li:before {
+            content: "🌸";
+            position: absolute;
+            left: 0;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: #666;
+            background: white;
+            border-radius: 15px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .image-gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
-    
+    <header>
+        <div class="container">
+            <h1>杭州西湖</h1>
+            <p class="subtitle">人间天堂，诗画江南</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="content">
+            <p class="intro">
+                西湖，位于浙江省杭州市西湖区龙井路1号，是中国大陆首批5A级旅游景区之一，也是中国十大风景名胜之一。西湖三面环山，一面临城，湖中白堤、苏堤、杨公堤等堤桥将湖面分割，形成了"一山、二塔、三岛、三堤、五湖"的基本格局。
+            </p>
+
+            <div class="image-gallery">
+                <div class="image-item">
+                    <img src="https://th.bing.com/th/id/OIP.Tp2kbJHgdieQM-VufV0lqAHaEK?rs=1&pid=ImgDetMain" alt="西湖全景">
+                    <div class="image-caption">西湖全景 - 湖光山色，美不胜收</div>
+                </div>
+                <div class="image-item">
+                    <img src="https://th.bing.com/th/id/R.f8219b5a15bda352db3bf72251319bdc?rik=yED8zbfsJhMBbw&riu=http%3a%2f%2fwww.exam58.com%2fuploads%2fallimg%2f181120%2f1-1Q1202100355S.jpg&ehk=XPfcOikb2e5EHXMYmPOl%2bQVbEJdq4gNKXf%2bRcOmeyro%3d&risl=&pid=ImgRaw&r=0" alt="断桥残雪">
+                    <div class="image-caption">断桥残雪 - 白娘子与许仙的传说之地</div>
+                </div>
+                <div class="image-item">
+                    <img src="https://th.bing.com/th/id/R.57bbfb28bfbfaba88d786977a4e8b301?rik=JWQjDMN8GOqIRQ&riu=http%3a%2f%2fimg.pconline.com.cn%2fimages%2fupload%2fupc%2ftx%2fphotoblog%2f1303%2f06%2fc2%2f18669149_18669149_1362603851866.jpg&ehk=E9EYq52UHAP2CefiuIMKHit4M09wQ3lPcqxcUV7ftB0%3d&risl=&pid=ImgRaw&r=0" alt="雷峰夕照">
+                    <div class="image-caption">雷峰夕照 - 夕阳西下，塔影婆娑</div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>历史文化</h2>
+                <p>
+                    西湖的历史可以追溯到新石器时代，距今已有5000多年的历史。春秋时期，这里是吴越两国的边界。到了唐代，西湖开始成为文人墨客吟咏的对象。宋代大文豪苏东坡在杭州任职期间，疏浚西湖，修筑苏堤，为西湖的发展做出了重要贡献。
+                </p>
+                <p>
+                    西湖不仅是一个自然景观，更是一个文化符号。历代文人留下了无数赞美西湖的诗篇，如"欲把西湖比西子，淡妆浓抹总相宜"、"接天莲叶无穷碧，映日荷花别样红"等千古名句，让西湖成为了中国文化中不可或缺的一部分。
+                </p>
+            </div>
+
+            <div class="highlights">
+                <h3>西湖十景</h3>
+                <ul>
+                    <li>苏堤春晓 - 春日里苏堤上的柳绿花红</li>
+                    <li>平湖秋月 - 秋夜湖面如镜，月影婆娑</li>
+                    <li>断桥残雪 - 雪后断桥的独特景致</li>
+                    <li>雷峰夕照 - 夕阳西下时雷峰塔的剪影</li>
+                    <li>南屏晚钟 - 南屏山净慈寺的钟声</li>
+                    <li>花港观鱼 - 花港公园的锦鲤戏水</li>
+                    <li>柳浪闻莺 - 柳浪闻莺公园的鸟语花香</li>
+                    <li>三潭印月 - 小瀛洲上的三座石塔</li>
+                    <li>双峰插云 - 南北高峰的云雾缭绕</li>
+                    <li>曲院风荷 - 曲院风荷的荷花盛开</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>自然风光</h2>
+                <p>
+                    西湖的自然风光四季各异，各有特色。春天，苏堤上的桃花、柳树争相绽放，形成"苏堤春晓"的美景；夏天，荷花盛开，曲院风荷成为避暑胜地；秋天，满山红叶，平湖秋月让人心旷神怡；冬天，断桥残雪更是别有一番韵味。
+                </p>
+                <p>
+                    西湖的水质清澈，湖中生长着各种水生植物，为鱼类和鸟类提供了良好的栖息环境。湖边的山峦起伏，植被茂密，形成了"山外青山楼外楼"的独特景观。这种山水相依的自然格局，在中国园林艺术中具有重要的地位。
+                </p>
+            </div>
+
+            <div class="section">
+                <h2>旅游建议</h2>
+                <p>
+                    游览西湖最佳的时间是春秋两季，此时气候宜人，景色最美。建议游客可以选择步行、骑行或乘船等多种方式游览。西湖周边有许多著名的景点，如灵隐寺、岳庙、六和塔等，可以一并游览。
+                </p>
+                <p>
+                    西湖周边还有许多特色美食，如龙井茶、西湖醋鱼、东坡肉等，都是不容错过的杭州特色。此外，西湖的夜景也别有一番风味，特别是音乐喷泉表演，更是吸引了众多游客。
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <button class="back-to-top" onclick="scrollToTop()">↑</button>
+
+    <footer>
+        <div class="container">
+            <p>© 2024 杭州西湖旅游指南 | 人间天堂，诗画江南</p>
+        </div>
+    </footer>
+
+    <script>
+        // 返回顶部按钮功能
+        window.onscroll = function() {
+            const backToTop = document.querySelector('.back-to-top');
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                backToTop.classList.add('show');
+            } else {
+                backToTop.classList.remove('show');
+            }
+        };
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
 </body>
 </html>
